@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Allaye Gana - Professional Resume</title>
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f9;
+            color: #333;
+        }
+
+        header {
+            background-color: #007bff;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .profile h1 {
+            margin: 0;
+            font-size: 2.5em;
+        }
+
+        .profile .contact {
+            margin: 10px 0;
+            font-size: 1.2em;
+        }
+
+        main {
+            padding: 20px;
+        }
+
+        h2 {
+            color: #007bff;
+            margin-bottom: 10px;
+        }
+
+        .skills-list,
+        .experience-item ul {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .skills-list li,
+        .experience-item ul li {
+            padding: 5px 0;
+            font-size: 1.1em;
+            display: flex;
+            align-items: center;
+        }
+
+        .skills-list li i,
+        .experience-item ul li i {
+            margin-right: 10px;
+            color: #007bff;
+        }
+
+        footer {
+            text-align: center;
+            padding: 10px;
+            background-color: #007bff;
+            color: white;
+        }
+
+        .experience-item {
+            margin-bottom: 20px;
+        }
+
+        .experience-item h3 {
+            margin: 0;
+            font-size: 1.5em;
+            color: #333;
+        }
+
+        .experience-item p {
+            font-style: italic;
+            margin-top: 5px;
+        }
+
+        /* Animation */
+        section {
+            opacity: 0;
+            transform: translateY(50px);
+            transition: opacity 0.5s, transform 0.5s;
+        }
+
+        section.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const sections = document.querySelectorAll('section');
+            window.addEventListener('scroll', function () {
+                sections.forEach(section => {
+                    const rect = section.getBoundingClientRect();
+                    if (rect.top < window.innerHeight && rect.bottom > 0) {
+                        section.classList.add('visible');
+                    } else {
+                        section.classList.remove('visible');
+                    }
+                });
+            });
+        });
+    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <div class="profile">
+                <h1>Allaye Gana</h1>
+                <p class="contact">
+                    <i class="fas fa-envelope"></i> Allayegana995@gmail.com <br>
+                    <i class="fas fa-phone-alt"></i> +1-646-724-8338
+                </p>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section id="summary">
+            <h2>Professional Summary</h2>
+            <p>
+                Over 7 years of experience in full-stack development, with a strong focus on backend development using Java technologies. Expert in building robust and scalable microservices architectures using Spring Boot, Spring Cloud, and RESTful APIs. Extensive experience with database management (PL/SQL for Oracle, MSSQL, and MongoDB), CI/CD pipelines with Jenkins, and automated deployments using Docker and Kubernetes. Skilled in backend optimization (caching strategies, load balancing, and asynchronous processing with Kafka and RabbitMQ). Experienced in cloud computing (AWS: EC2, Lambda, S3, RDS, API Gateway), and Agile environments. Adept at writing unit/integration tests with JUnit, Mockito, and SonarQube.
+            </p>
+        </section>
+
+        <section id="skills">
+            <h2>Technical Skills</h2>
+            <ul class="skills-list">
+                <li><i class="fas fa-code"></i> Java 8/11, Spring Boot, RESTful APIs, Hibernate</li>
+                <li><i class="fas fa-database"></i> MSSQL, MongoDB, Oracle 10g/11g, PL/SQL, DB2, Cassandra</li>
+                <li><i class="fas fa-cloud"></i> AWS, Docker, Kubernetes, OpenShift, Jenkins, Ansible</li>
+                <li><i class="fas fa-cogs"></i> Microservices, Kafka, RabbitMQ, JMS, Web Services</li>
+                <li><i class="fas fa-chart-line"></i> GitHub, SVN, Maven, ANT, IntelliJ, Eclipse</li>
+            </ul>
+        </section>
+
+        <section id="experience">
+            <h2>Professional Experience</h2>
+            <div class="experience-item">
+                <h3>Full Stack Developer - BNY Mellon, NY</h3>
+                <p>Feb 2023 - Present</p>
+                <ul>
+                    <li>Developed "BNY Mellon Investment Management Portal" using Java Spring Boot, enabling clients to invest online seamlessly.</li>
+                    <li>Designed RESTful APIs for core functionalities (authentication, product management, transaction processing).</li>
+                    <li>Optimized database performance using complex queries and stored procedures (MySQL, MongoDB, Oracle).</li>
+                    <li>Architected microservices using Spring Boot and deployed via AWS Lambda, API Gateway.</li>
+                    <li>Enhanced security with OAuth2, JWT tokens, and role-based access control. Conducted security audits.</li>
+                    <li>Developed unit and integration tests using JUnit, Mockito, and set up CI/CD pipelines in Jenkins.</li>
+                    <li>Implemented real-time data processing with Kafka, WebSocket solutions, and Swagger/OpenAPI for API documentation.</li>
+                </ul>
+            </div>
+
+            <div class="experience-item">
+                <h3>Current Project - Investment Management Portal</h3>
+                <p>2024 - Present</p>
+                <ul>
+                    <li>Working on a high-performance **Investment Management Portal** to handle customer transactions and manage portfolios efficiently.</li>
+                    <li>Leveraging **Java Spring Boot** and **REST APIs** to ensure secure and scalable services.</li>
+                    <li>Incorporating **Stripe** for payment processing and secure transactions.</li>
+                    <li>Integrating real-time market data via **Kafka** for rapid transaction updates.</li>
+                    <li>Handling complex **financial data** and performing operations on multiple datasets.</li>
+                    <li>Building responsive user interfaces using **ReactJS** with state management via **Redux**.</li>
+                </ul>
+            </div>
+
+            <div class="experience-item">
+                <h3>Full Stack Developer - OMNI BANK, Sao Paulo, Brazil</h3>
+                <p>Feb 2017 - Jan 2023</p>
+                <ul>
+                    <li>Led backend development using **Java Spring Boot** and microservices architecture, focusing on **80% backend** work.</li>
+                    <li>Worked on the **Open Credit Card System**, **Financing Company Project**, and **Automobile Financing** projects.</li>
+                    <li>Utilized **cloud technologies** like AWS, Docker, and Kubernetes to deploy scalable solutions.</li>
+                    <li>Managed databases including **MSSQL, Oracle, and MongoDB** to ensure efficient and secure data processing.</li>
+                    <li>Implemented secure and scalable solutions for financial services using **Java Spring Boot**, **Microservices**, and **ReactJS**.</li>
+                    <li>Built and maintained frontend interfaces with **React Native** and **Angular** to create a seamless user experience.</li>
+                    <li>Optimized backend performance by implementing caching strategies and load balancing.</li>
+                    <li>Managed integrations with various financial data systems, improving transaction processing efficiency.</li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="education">
+            <h2>Education</h2>
+            <p>Bachelor’s degree in Technology and Information, Major: Analysis and Systems Development (2019)<br>FAM FACULDADE das Américas</p>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2024 Allaye Gana - All Rights Reserved</p>
+    </footer>
+</body>
+
+</html>
