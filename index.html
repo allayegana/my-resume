@@ -17,9 +17,20 @@
         header {
             background-color: #007bff;
             color: white;
-            padding: 20px;
             text-align: center;
+            position: fixed; /* Makes the header stay fixed at the top */
+            top: 0;
+            width: 100%;
+            z-index: 1000; /* Ensures the header stays on top of other elements */
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Adds a shadow effect */
         }
+
+        main {
+            padding: 100px 20px 20px;
+            margin-top: 30px;
+            
+        }
+
 
         .profile h1 {
             margin: 0;
@@ -31,9 +42,7 @@
             font-size: 1.2em;
         }
 
-        main {
-            padding: 20px;
-        }
+   
 
         h2 {
             color: #007bff;
