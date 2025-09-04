@@ -2,212 +2,232 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Allaye Gana - Professional Resume</title>
-    <style>
-        body {
-            font-family: 'Poppins', sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f4f4f9;
-            color: #333;
-        }
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Allaye Gana - Professional Resume</title>
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f4f4f9;
+      color: #333;
+    }
 
-        header {
-            background-color: #007bff;
-            color: white;
-            text-align: center;
-            position: fixed; /* Makes the header stay fixed at the top */
-            top: 0;
-            width: 100%;
-            z-index: 1000; /* Ensures the header stays on top of other elements */
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Adds a shadow effect */
-        }
+    header {
+      background-color: slategrey;
+      color: white;
+      text-align: center;
+      position: fixed;
+      top: 0;
+      width: 100%;
+      z-index: 1000;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
 
-        main {
-            padding: 100px 20px 20px;
-            margin-top: 30px;
-            
-        }
+    main {
+      padding: 100px 20px 20px;
+      margin-top: 30px;
+    }
 
+    .profile h1 {
+      margin: 0;
+      font-size: 2.5em;
+    }
 
-        .profile h1 {
-            margin: 0;
-            font-size: 2.5em;
-        }
+    .profile .contact {
+      margin: 10px 0;
+      font-size: 1.1em;
+    }
 
-        .profile .contact {
-            margin: 10px 0;
-            font-size: 1.2em;
-        }
+    h2 {
+      color: #007bff;
+      margin-bottom: 10px;
+    }
 
-   
+    .skills-list,
+    .experience-item ul {
+      list-style: none;
+      padding-left: 0;
+    }
 
-        h2 {
-            color: #007bff;
-            margin-bottom: 10px;
-        }
+    .skills-list li,
+    .experience-item ul li {
+      padding: 5px 0;
+      font-size: 1.05em;
+      display: flex;
+      align-items: center;
+    }
 
-        .skills-list,
-        .experience-item ul {
-            list-style: none;
-            padding-left: 0;
-        }
+    .skills-list li i,
+    .experience-item ul li i {
+      margin-right: 10px;
+      color: #007bff;
+    }
 
-        .skills-list li,
-        .experience-item ul li {
-            padding: 5px 0;
-            font-size: 1.1em;
-            display: flex;
-            align-items: center;
-        }
+    footer {
+      text-align: center;
+      padding: 10px;
+      background-color: slategrey;
+      color: white;
+    }
 
-        .skills-list li i,
-        .experience-item ul li i {
-            margin-right: 10px;
-            color: #007bff;
-        }
+    .experience-item {
+      margin-bottom: 20px;
+    }
 
-        footer {
-            text-align: center;
-            padding: 10px;
-            background-color: #007bff;
-            color: white;
-        }
+    .experience-item h3 {
+      margin: 0;
+      font-size: 1.5em;
+      color: #333;
+    }
 
-        .experience-item {
-            margin-bottom: 20px;
-        }
+    .experience-item p {
+      font-style: italic;
+      margin-top: 5px;
+    }
 
-        .experience-item h3 {
-            margin: 0;
-            font-size: 1.5em;
-            color: #333;
-        }
+    section {
+      opacity: 0;
+      transform: translateY(50px);
+      transition: opacity 0.5s, transform 0.5s;
+    }
 
-        .experience-item p {
-            font-style: italic;
-            margin-top: 5px;
-        }
-
-        /* Animation */
-        section {
-            opacity: 0;
-            transform: translateY(50px);
-            transition: opacity 0.5s, transform 0.5s;
-        }
-
-        section.visible {
-            opacity: 1;
-            transform: translateY(0);
-        }
-    </style>
-    <script>
-        document.addEventListener('DOMContentLoaded', function () {
-            const sections = document.querySelectorAll('section');
-            window.addEventListener('scroll', function () {
-                sections.forEach(section => {
-                    const rect = section.getBoundingClientRect();
-                    if (rect.top < window.innerHeight && rect.bottom > 0) {
-                        section.classList.add('visible');
-                    } else {
-                        section.classList.remove('visible');
-                    }
-                });
-            });
+    section.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  </style>
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const sections = document.querySelectorAll('section');
+      window.addEventListener('scroll', function () {
+        sections.forEach(section => {
+          const rect = section.getBoundingClientRect();
+          if (rect.top < window.innerHeight && rect.bottom > 0) {
+            section.classList.add('visible');
+          } else {
+            section.classList.remove('visible');
+          }
         });
-    </script>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+      });
+    });
+  </script>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
 </head>
 
 <body>
-    <header>
-        <div class="container">
-            <div class="profile">
-                <h1>Allaye Gana</h1>
-                <p class="contact">
-                    <i class="fas fa-envelope"></i> Allayegana995@gmail.com <br>
-                    <i class="fas fa-phone-alt"></i> +1-646-724-8338
-                </p>
-            </div>
-        </div>
-    </header>
+  <header>
+    <div class="container">
+      <div class="profile">
+        <h1>Allaye Gana</h1>
+        <p class="contact">
+          Bronx, NY <br>
+          <i class=""></i> 646-724-8338 | 347-290-2561 <br>
+          <i class="fas fa-envelope"></i> ganaallaye7@gmail.com
+        </p>
+      </div>
+    </div>
+  </header>
 
-    <main>
-        <section id="summary">
-            <h2>Professional Summary</h2>
-            <p>
-                Over 7 years of experience in full-stack development, with a strong focus on backend development using Java technologies. Expert in building robust and scalable microservices architectures using Spring Boot, Spring Cloud, and RESTful APIs. Extensive experience with database management (PL/SQL for Oracle, MSSQL, and MongoDB), CI/CD pipelines with Jenkins, and automated deployments using Docker and Kubernetes. Skilled in backend optimization (caching strategies, load balancing, and asynchronous processing with Kafka and RabbitMQ). Experienced in cloud computing (AWS: EC2, Lambda, S3, RDS, API Gateway), and Agile environments. Adept at writing unit/integration tests with JUnit, Mockito, and SonarQube.
-            </p>
-        </section>
+  <main>
+    <br>
+    <section id="summary">
+      <h2>Professional Summary</h2>
+      <p>
+        • Over 5 years of experience in full stack development, strongly focusing on backend development using Java
+        technologies. <br>
+        • Expert in building robust and scalable microservices architectures using Spring Boot, Spring Cloud, and RESTful
+        APIs. <br>
+        • Extensive experience with database management, including PL/SQL for Oracle, and integration with MSSQL and
+        MongoDB. <br>
+        • Proficient in implementing CI/CD pipelines using Jenkins and managing automated deployments with tools like
+        Docker and Kubernetes. <br>
+        • Skilled in optimizing backend performance, including caching strategies, load balancing, and asynchronous
+        processing using Kafka and RabbitMQ. <br>
+        • Demonstrated ability to lead backend development projects, ensuring high availability, security, and scalability
+        of applications. <br>
+        • Experienced in cloud computing with AWS, leveraging services like EC2, Lambda, S3, RDS, and API Gateway for
+        backend solutions. <br>
+        • Collaborated effectively within Agile environments, focusing on continuous improvement and iterative
+        development of backend systems. <br>
+        • Adept at writing unit and integration tests and ensuring code quality with tools like JUnit, Mockito, and
+        SonarQube.
+      </p>
+    </section>
 
-        <section id="skills">
-            <h2>Technical Skills</h2>
-            <ul class="skills-list">
-                <li><i class="fas fa-code"></i> Java 8/11/17, Spring Boot, RESTful APIs, Hibernate</li>
-                <li><i class="fas fa-database"></i> MSSQL, MongoDB, Oracle 10g/11g, PL/SQL, DB2, Cassandra</li>
-                <li><i class="fas fa-cloud"></i> AWS, Docker, Kubernetes, OpenShift, Jenkins, Ansible</li>
-                <li><i class="fas fa-cogs"></i> Microservices, Kafka, RabbitMQ, JMS, Web Services</li>
-                <li><i class="fas fa-chart-line"></i> GitHub, SVN, Maven, ANT, IntelliJ, Eclipse</li>
-            </ul>
-        </section>
+    <section id="skills">
+      <h2>Technical Skills</h2>
+      <ul class="skills-list">
+        <li><i class="fas fa-code"></i> Programming Languages: Java (8/11/17/21), SQL, PL/SQL, JavaScript, Python</li>
+        <li><i class="fas fa-globe"></i> Web Technologies: HTML, CSS, JSP, Servlets, JDBC, RESTful, SOAP</li>
+        <li><i class="fas fa-project-diagram"></i> Frameworks: Spring (Core, MVC, Boot, Security, Cloud), Hibernate, React.js, Angular, Microservices</li>
+        <li><i class="fas fa-exchange-alt"></i> Messaging: Kafka, RabbitMQ, JMS</li>
+        <li><i class="fas fa-database"></i> Databases: MySQL, Oracle (10g/11g), DB2, Cassandra, MongoDB</li>
+        <li><i class="fas fa-tools"></i> Tools/IDEs: Eclipse, IntelliJ, NetBeans, STS, Swagger/OpenAPI</li>
+        <li><i class="fab fa-git-alt"></i> Version Control: GitHub, SVN</li>
+        <li><i class="fas fa-cogs"></i> Build/CI/CD: Maven, ANT, Jenkins, Ansible</li>
+        <li><i class="fas fa-box"></i> Containers/Orchestration: Docker, Kubernetes, OpenShift</li>
+        <li><i class="fas fa-memory"></i> Caching: Redis</li>
+        <li><i class="fas fa-server"></i> Servers: Tomcat, WebLogic, WebSphere, JBOSS</li>
+        <li><i class="fas fa-lock"></i> Security: OAuth2, JWT, RBAC, Input Validation, Encryption</li>
+        <li><i class="fas fa-cloud"></i> Cloud: AWS (EC2, Lambda, API Gateway, S3, RDS)</li>
+        <li><i class="fas fa-stream"></i> Data Processing: Kafka Producers/Consumers, RabbitMQ Streams</li>
+      </ul>
+    </section>
 
-        <section id="experience">
-            <h2>Professional Experience</h2>
-            <div class="experience-item">
-                <h3>Full Stack Developer - BNY Mellon, NY</h3>
-                <p>Feb 2023 - Present</p>
-                <ul>
-                    <li>Developed "BNY Mellon Investment Management Portal" using Java Spring Boot, enabling clients to invest online seamlessly.</li>
-                    <li>Designed RESTful APIs for core functionalities (authentication, product management, transaction processing).</li>
-                    <li>Optimized database performance using complex queries and stored procedures (MySQL, MongoDB, Oracle).</li>
-                    <li>Architected microservices using Spring Boot and deployed via AWS Lambda, API Gateway.</li>
-                    <li>Enhanced security with OAuth2, JWT tokens, and role-based access control. Conducted security audits.</li>
-                    <li>Developed unit and integration tests using JUnit, Mockito, and set up CI/CD pipelines in Jenkins.</li>
-                    <li>Implemented real-time data processing with Kafka, WebSocket solutions, and Swagger/OpenAPI for API documentation.</li>
-                </ul>
-            </div>
+    <section id="experience">
+      <h2>Professional Experience</h2>
 
-            <div class="experience-item">
-                <h3>Current Project - Investment Management Portal</h3>
-                <p>2024 - Present</p>
-                <ul>
-                    <li>Working on a high-performance **Investment Management Portal** to handle customer transactions and manage portfolios efficiently.</li>
-                    <li>Leveraging **Java Spring Boot** and **REST APIs** to ensure secure and scalable services.</li>
-                    <li>Incorporating **Stripe** for payment processing and secure transactions.</li>
-                    <li>Integrating real-time market data via **Kafka** for rapid transaction updates.</li>
-                    <li>Handling complex **financial data** and performing operations on multiple datasets.</li>
-                    <li>Building responsive user interfaces using **ReactJS** with state management via **Redux**.</li>
-                </ul>
-            </div>
+      <div class="experience-item">
+        <h3>BNY Mellon, NY | Full Stack Developer</h3>
+        <p>Feb 2022 - Present</p>
+        <ul>
+          <li>Designed and implemented RESTful APIs using Java Spring Boot for authentication, product management, and transactions.</li>
+          <li>Built secure, scalable, maintainable backend services integrated with frontend components and third-party APIs.</li>
+          <li>Developed responsive UIs with React.js and Angular for improved user experience.</li>
+          <li>Implemented OLTP systems to process high-volume, low-latency transactions.</li>
+          <li>Tuned complex SQL queries and indexing strategies for Oracle, MySQL, and MongoDB.</li>
+          <li>Optimized data pipelines using Kafka and RabbitMQ for real-time processing.</li>
+          <li>Architected microservices deployed with Docker/Kubernetes on AWS for scalability.</li>
+          <li>Implemented OAuth2, JWT, RBAC, input validation, and encryption for application security.</li>
+          <li>Wrote unit/integration tests with JUnit/Mockito and automated pipelines with Jenkins.</li>
+          <li>Resolved performance bottlenecks using profiling tools and caching with Redis.</li>
+          <li>Documented APIs using Swagger/OpenAPI for consistency and integration.</li>
+        </ul>
+      </div>
 
-            <div class="experience-item">
-                <h3>Full Stack Developer - OMNI BANK, Sao Paulo, Brazil</h3>
-                <p>Feb 2017 - Jan 2023</p>
-                <ul>
-                    <li>Led backend development using **Java Spring Boot** and microservices architecture, focusing on **80% backend** work.</li>
-                    <li>Worked on the **Open Credit Card System**, **Financing Company Project**, and **Automobile Financing** projects.</li>
-                    <li>Utilized **cloud technologies** like AWS, Docker, and Kubernetes to deploy scalable solutions.</li>
-                    <li>Managed databases including **MSSQL, Oracle, and MongoDB** to ensure efficient and secure data processing.</li>
-                    <li>Implemented secure and scalable solutions for financial services using **Java Spring Boot**, **Microservices**, and **ReactJS**.</li>
-                    <li>Built and maintained frontend interfaces with **React Native** and **Angular** to create a seamless user experience.</li>
-                    <li>Optimized backend performance by implementing caching strategies and load balancing.</li>
-                    <li>Managed integrations with various financial data systems, improving transaction processing efficiency.</li>
-                </ul>
-            </div>
-        </section>
+      <div class="experience-item">
+        <h3>Omni Bank, São Paulo, Brazil | Full Stack Developer</h3>
+        <p>Oct 2020 - Jan 2022</p>
+        <ul>
+          <li>Developed web applications using REST APIs in Java within deadlines.</li>
+          <li>Participated in code reviews ensuring maintainable, high-quality code.</li>
+          <li>Resolved user-reported technical issues and optimized application features.</li>
+          <li>Performed SQL management, database migrations, and tuning for OLTP systems.</li>
+          <li>Deployed and managed applications in Docker/Kubernetes environments.</li>
+          <li>Gathered client requirements and assisted in product demos.</li>
+          <li>Monitored and optimized system performance for speed and scalability.</li>
+          <li>Maintained technical documentation and implemented security practices.</li>
+        </ul>
+      </div>
+    </section>
 
-        <section id="education">
-            <h2>Education</h2>
-            <p>Bachelor’s degree in Technology and Information, Major: Analysis and Systems Development (2019)<br>FAM FACULDADE das Américas</p>
-        </section>
-    </main>
+    <section id="education">
+      <h2>Education</h2>
+      <p>
+        Bachelor’s Degree in Technology and Information<br>
+        Major: Analysis and Systems Development<br>
+        FAM Faculdade das Américas, 2019
+      </p>
+    </section>
+  </main>
 
-    <footer>
-        <p>© 2024 Allaye Gana - All Rights Reserved</p>
-    </footer>
+  <footer>
+    <p>© 2025 Allaye Gana - All Rights Reserved</p>
+  </footer>
 </body>
 
 </html>
